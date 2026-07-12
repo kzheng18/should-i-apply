@@ -1,0 +1,9 @@
+{
+  "name": "should-i-apply",
+  "version": "0.1.0",
+  "description": "Chrome extension: fit score + ghost-job flags on any job posting. 100% local.",
+  "scripts": {
+    "test": "node test/run-tests.js"
+  },
+  "license": "MIT"
+}

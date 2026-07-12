@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Should I Apply?",
+  "version": "0.1.0",
+  "description": "Scores how well a job posting fits your resume and flags likely ghost jobs — 100% in your browser. Your resume never leaves your machine.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Should I Apply?"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/jobs/*",
+        "https://*.indeed.com/*",
+        "https://boards.greenhouse.io/*",
+        "https://jobs.lever.co/*",
+        "https://jobs.ashbyhq.com/*"
+      ],
+      "js": ["lib/sites.js", "lib/skills.js", "lib/ghost.js", "content.js"],
+      "css": ["panel.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
