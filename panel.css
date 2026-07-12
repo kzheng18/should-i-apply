@@ -1,0 +1,113 @@
+/* panel.css — styles for the injected badge + panel. Namespaced with sia- to
+   avoid clashing with host-page styles. */
+
+#sia-badge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147483646;
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+#sia-badge .sia-badge-fit,
+#sia-badge .sia-badge-risk {
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 12px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+#sia-badge .sia-badge-risk {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+#sia-panel {
+  position: fixed;
+  bottom: 68px;
+  right: 20px;
+  z-index: 2147483647;
+  width: 320px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  padding: 0 16px 14px;
+}
+#sia-panel .sia-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 0 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 8px;
+}
+#sia-panel #sia-close {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #6b7280;
+  line-height: 1;
+}
+#sia-panel .sia-section { margin: 12px 0; }
+#sia-panel h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: #6b7280; }
+#sia-panel .sia-score { font-size: 22px; font-weight: 800; }
+#sia-panel .sia-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+#sia-panel .sia-chip {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 12px;
+}
+#sia-panel .sia-muted { color: #9ca3af; font-style: italic; }
+#sia-panel .sia-flags { list-style: none; padding: 0; margin: 0; }
+#sia-panel .sia-flag {
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  background: #f9fafb;
+  border-left: 3px solid #9ca3af;
+}
+#sia-panel .sia-flag.sia-warn { border-left-color: #d97706; background: #fffbeb; }
+#sia-panel .sia-flag.sia-info { border-left-color: #3b82f6; background: #eff6ff; }
+#sia-panel .sia-flag strong { display: block; margin-bottom: 2px; }
+#sia-panel .sia-flag span { color: #4b5563; }
+#sia-panel .sia-warning {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+#sia-panel .sia-actions { display: flex; gap: 8px; margin-top: 12px; }
+#sia-panel .sia-actions button {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+#sia-panel .sia-actions button:hover { background: #f9fafb; }
+#sia-panel .sia-footnote { margin-top: 10px; font-size: 11px; color: #9ca3af; text-align: center; }
