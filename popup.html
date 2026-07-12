@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { width: 320px; margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #111827; }
+      header { padding: 14px 16px; border-bottom: 1px solid #eee; }
+      header h1 { font-size: 15px; margin: 0; }
+      header p { font-size: 11px; color: #6b7280; margin: 4px 0 0; }
+      .body { padding: 14px 16px; }
+      label { font-size: 12px; font-weight: 600; display: block; margin-bottom: 6px; }
+      textarea { width: 100%; box-sizing: border-box; height: 140px; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px; font-size: 12px; resize: vertical; }
+      button { margin-top: 10px; width: 100%; background: #111827; color: #fff; border: none; border-radius: 8px; padding: 10px; font-weight: 600; cursor: pointer; }
+      button:hover { background: #374151; }
+      .status { font-size: 11px; color: #16a34a; margin-top: 8px; min-height: 14px; text-align: center; }
+      .skills { margin-top: 10px; font-size: 11px; color: #6b7280; }
+      .saved { margin-top: 14px; border-top: 1px solid #eee; padding-top: 10px; }
+      .saved h2 { font-size: 12px; margin: 0 0 6px; }
+      .job { font-size: 11px; padding: 4px 0; border-bottom: 1px solid #f3f4f6; }
+      .footnote { font-size: 10px; color: #9ca3af; margin-top: 12px; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Should I Apply?</h1>
+      <p>Paste your resume once. It stays on this device.</p>
+    </header>
+    <div class="body">
+      <label for="resume">Your resume / background</label>
+      <textarea id="resume" placeholder="Paste your resume text here..."></textarea>
+      <button id="save">Save resume</button>
+      <div class="status" id="status"></div>
+      <div class="skills" id="skills"></div>
+      <div class="saved" id="savedWrap" style="display:none">
+        <h2>Saved jobs</h2>
+        <div id="savedList"></div>
+      </div>
+      <div class="footnote">100% local · no account · no tracking</div>
+    </div>
+    <script src="lib/skills.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
