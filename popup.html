@@ -9,10 +9,19 @@
       header p { font-size: 11px; color: #6b7280; margin: 4px 0 0; }
       .body { padding: 14px 16px; }
       label { font-size: 12px; font-weight: 600; display: block; margin-bottom: 6px; }
-      textarea { width: 100%; box-sizing: border-box; height: 140px; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px; font-size: 12px; resize: vertical; }
+      textarea { width: 100%; box-sizing: border-box; height: 130px; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px; font-size: 12px; resize: vertical; }
       button { margin-top: 10px; width: 100%; background: #111827; color: #fff; border: none; border-radius: 8px; padding: 10px; font-weight: 600; cursor: pointer; }
       button:hover { background: #374151; }
+      .upload {
+        display: flex; align-items: center; justify-content: center; gap: 8px;
+        border: 1px dashed #9ca3af; border-radius: 8px; padding: 12px; cursor: pointer;
+        font-size: 12px; color: #374151; background: #f9fafb; margin-bottom: 10px;
+      }
+      .upload:hover { background: #f3f4f6; border-color: #6b7280; }
+      .upload input { display: none; }
+      .or { text-align: center; font-size: 11px; color: #9ca3af; margin: 6px 0; }
       .status { font-size: 11px; color: #16a34a; margin-top: 8px; min-height: 14px; text-align: center; }
+      .status.err { color: #dc2626; }
       .skills { margin-top: 10px; font-size: 11px; color: #6b7280; }
       .saved { margin-top: 14px; border-top: 1px solid #eee; padding-top: 10px; }
       .saved h2 { font-size: 12px; margin: 0 0 6px; }
@@ -23,10 +32,17 @@
   <body>
     <header>
       <h1>Should I Apply?</h1>
-      <p>Paste your resume once. It stays on this device.</p>
+      <p>Upload or paste your resume once. It stays on this device.</p>
     </header>
     <div class="body">
-      <label for="resume">Your resume / background</label>
+      <label>Your resume / background</label>
+
+      <label class="upload" id="dropzone">
+        <span id="uploadLabel">⬆︎ Upload resume (.pdf or .txt)</span>
+        <input type="file" id="file" accept=".pdf,.txt,text/plain,application/pdf" />
+      </label>
+      <div class="or">— or paste below —</div>
+
       <textarea id="resume" placeholder="Paste your resume text here..."></textarea>
       <button id="save">Save resume</button>
       <div class="status" id="status"></div>
@@ -37,6 +53,7 @@
       </div>
       <div class="footnote">100% local · no account · no tracking</div>
     </div>
+    <script src="vendor/pdf.min.js"></script>
     <script src="lib/skills.js"></script>
     <script src="popup.js"></script>
   </body>

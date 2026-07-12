@@ -15,7 +15,7 @@ Autofill (Simplify), tracking (Huntr, Teal), and resume optimization (Jobscan) a
 
 ## How it works
 
-1. Paste your resume once (stored in `chrome.storage.local`).
+1. Upload your resume (`.pdf` or `.txt`) or paste it once (stored in `chrome.storage.local`). PDFs are parsed to text locally via a vendored pdf.js — nothing is uploaded anywhere.
 2. Browse LinkedIn / Indeed / Greenhouse / Lever / Ashby as usual.
 3. A badge appears on each posting: fit % + ghost-risk. Click it for the breakdown — matched skills, missing skills, and the specific red flags found on the page.
 
