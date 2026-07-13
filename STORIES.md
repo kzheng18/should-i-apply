@@ -24,6 +24,7 @@ as real issues on a "Should I Apply?" project board.
 - **SIA-13 · Saved-jobs page (list + delete)**
 - **SIA-14 · Export saved jobs to CSV**
 - **SIA-15 · Unit tests for the matcher (CI via GitHub Actions)**
+- **SIA-22 · Upload resume (.pdf / .txt) instead of pasting** — client-side PDF text extraction via vendored pdf.js. ✅ done (PR)
 
 ## Epic 3 — The differentiator
 
